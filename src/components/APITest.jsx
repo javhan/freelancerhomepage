@@ -23,7 +23,7 @@ const APITest = (props) => {
       setAssetsData(json.results);
     };
     makeApiCall();
-  }, []);
+  }, [1]);
   // return (
   //     for ()
   // )
