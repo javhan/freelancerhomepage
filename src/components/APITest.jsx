@@ -23,16 +23,16 @@ const APITest = (props) => {
       setAssetsData(json.results);
     };
     makeApiCall();
-  }, [1]);
+  }, []);
   // return (
   //     for ()
   // )
 
   return (
     <>
-      {assets.map((props) => (
-        <div>
-          <div>name= {JSON.stringify(props)}</div>
+      {assets.map((props, index) => (
+        <div key = {index}>
+          <div >name= {JSON.stringify(props)}</div>
           <br></br>
         </div>
       ))}
