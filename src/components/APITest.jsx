@@ -32,7 +32,7 @@ const APITest = (props) => {
     <>
       {assets.map((props, index) => (
         <div key = {index}>
-          <div >name= {JSON.stringify(props)}</div>
+          <div >name= {props.company.display_name}</div>
           <br></br>
         </div>
       ))}
