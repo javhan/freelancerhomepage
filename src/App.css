@@ -60,4 +60,24 @@ nav h1 {
 .topBar {
   height: 50px;
   display: flex;
+  justify-content: space-between;
+}
+
+.login {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin-right: 50px;
+  display: flex;
+}
+
+.username {
+  margin-right: 20px;
+}
+
+button {
+  margin-left: 20px;
+  margin-top: 14px;
+  height: 25px;
+  vertical-align: middle;
 }
