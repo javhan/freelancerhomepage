@@ -1,9 +1,7 @@
 import React, { useState, useContext } from "react";
 import image from "../assets/profilepic.jpg";
 import "./Profile.css";
-import profileData from "./data/profile";
 import EditProfile from "./EditProfile";
-import { Link } from "react-router-dom";
 import { ProfileContext } from "../App";
 
 export default function Profile() {
