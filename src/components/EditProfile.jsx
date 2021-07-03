@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { ProfileContext } from "../App"
 
 export default function EditProfile(props) {
-    const [formData, setFormData] = useState(props.profile);    
+    const profileContext = useContext(ProfileContext);
+    console.log(profileContext)
+    const [formData, setFormData] = useState(profileContext.profile);    
   
     const handleSaveChanges = (event) => {
     event.preventDefault();
-    props.updateProfile({...formData});
-    console.log("Hello");
+    profileContext.updateProfile({...formData});
+    props.handleClick();
   };
 
   const handleFirstNameChange = (event) => {
@@ -17,6 +20,21 @@ export default function EditProfile(props) {
   const handleLastNameChange = (event) => {
     const lastName = event.target.name;
     setFormData({ ...formData, [lastName]: event.target.value });
+  };
+
+  const handleJobTitleChange = (event) => {
+    const jobTitle = event.target.name;
+    setFormData({ ...formData, [jobTitle]: event.target.value });
+  };
+
+  const handleEmailChange = (event) => {
+    const emailAddress = event.target.name;
+    setFormData({ ...formData, [emailAddress]: event.target.value });
+  };
+
+  const handleContactChange = (event) => {
+    const contactNumber = event.target.name;
+    setFormData({ ...formData, [contactNumber]: event.target.value });
   };
 
   return (
@@ -40,31 +58,31 @@ export default function EditProfile(props) {
             type="string"
             placeholder="Last Name"
             value={formData.lastName}
-            // onChange={handlePriceChange}
+            onChange={handleLastNameChange}
           />
           <br></br>
           <input
             name="jobTitle"
             type="string"
             placeholder="Job Title"
-            // value={formData.description}
-            // onChange={handleDesChange}
+            value={formData.jobTitle}
+            onChange={handleJobTitleChange}
           />
           <br></br>
           <input
             name="emailAddress"
             type="string"
             placeholder="Email Address"
-            // value={formData.description}
-            // onChange={handleDesChange}
+            value={formData.emailAddress}
+            onChange={handleEmailChange}
           />
           <br></br>
           <input
             name="contactNumber"
             type="string"
             placeholder="Contact Number"
-            // value={formData.description}
-            // onChange={handleDesChange}
+            value={formData.contactNumber}
+            onChange={handleContactChange}
           />
         </form>
       </div>
