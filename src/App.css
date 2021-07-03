@@ -85,3 +85,9 @@ button {
 a:link {
   color: white;
 }
+
+.scheduler {
+  height: 300px;
+  width: 50%;
+  overflow-y: scroll;
+}
