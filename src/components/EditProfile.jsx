@@ -12,29 +12,9 @@ export default function EditProfile(props) {
     props.handleClick();
   };
 
-  const handleFirstNameChange = (event) => {
-    const firstName = event.target.name;
-    setFormData({ ...formData, [firstName]: event.target.value });
-  };
-
-  const handleLastNameChange = (event) => {
-    const lastName = event.target.name;
-    setFormData({ ...formData, [lastName]: event.target.value });
-  };
-
-  const handleJobTitleChange = (event) => {
-    const jobTitle = event.target.name;
-    setFormData({ ...formData, [jobTitle]: event.target.value });
-  };
-
-  const handleEmailChange = (event) => {
-    const emailAddress = event.target.name;
-    setFormData({ ...formData, [emailAddress]: event.target.value });
-  };
-
-  const handleContactChange = (event) => {
-    const contactNumber = event.target.name;
-    setFormData({ ...formData, [contactNumber]: event.target.value });
+  const handleChange = (event) => {
+    const name = event.target.name;
+    setFormData({ ...formData, [name]: event.target.value });
   };
 
   return (
@@ -50,7 +30,7 @@ export default function EditProfile(props) {
             type="string"
             placeholder="First Name"
             value={formData.firstName}
-            onChange={handleFirstNameChange}
+            onChange={handleChange}
           />
           <br></br>
           <input
@@ -58,7 +38,7 @@ export default function EditProfile(props) {
             type="string"
             placeholder="Last Name"
             value={formData.lastName}
-            onChange={handleLastNameChange}
+            onChange={handleChange}
           />
           <br></br>
           <input
@@ -66,7 +46,7 @@ export default function EditProfile(props) {
             type="string"
             placeholder="Job Title"
             value={formData.jobTitle}
-            onChange={handleJobTitleChange}
+            onChange={handleChange}
           />
           <br></br>
           <input
@@ -74,7 +54,7 @@ export default function EditProfile(props) {
             type="string"
             placeholder="Email Address"
             value={formData.emailAddress}
-            onChange={handleEmailChange}
+            onChange={handleChange}
           />
           <br></br>
           <input
@@ -82,7 +62,7 @@ export default function EditProfile(props) {
             type="string"
             placeholder="Contact Number"
             value={formData.contactNumber}
-            onChange={handleContactChange}
+            onChange={handleChange}
           />
         </form>
       </div>
