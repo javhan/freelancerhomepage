@@ -3,7 +3,6 @@ import { ProfileContext } from "../App"
 
 export default function EditProfile(props) {
     const profileContext = useContext(ProfileContext);
-    console.log(profileContext)
     const [formData, setFormData] = useState(profileContext.profile);    
   
     const handleSaveChanges = (event) => {

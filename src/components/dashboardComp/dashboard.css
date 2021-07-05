@@ -1,0 +1,89 @@
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+.top_half {
+  padding: 30px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.bottom_half {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 400px;
+}
+.scheduler {
+  height: 400px;
+  overflow-y: scroll;
+  margin: 50px;
+}
+
+.past_jobs {
+  margin: 30px;
+}
+
+.upcoming_jobs {
+  margin: 30px;
+}
+
+.add_job {
+  margin: 30px;
+  height: 300px;
+}
+
+/* Tooltip container */
+
+  
+  /* Tooltip text */
+  .title .hovertext {
+    visibility: hidden;
+    width: 300px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .title:hover .hovertext {
+    visibility: visible;
+  }
+
+  .minijb tr {
+      height: 20px;
+  }
+
+  .minijb th {
+    border: 1px solid black;
+    padding: 10px;
+  }
+
+  .minijb td {
+    border: 1px solid black;
+    padding: 10px;
+  }
+
+  #page {
+      background-color: white
+  }
+
+  .pagination { 
+      display: flex;
+      list-style-type: none;
+  }
+
+  .page-link {
+      padding: 5px;
+  }
