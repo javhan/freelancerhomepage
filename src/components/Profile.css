@@ -2,3 +2,28 @@
     height: 200px;
     width: 180px;
 }
+
+.profilepage {
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: space-evenly;
+}
+
+.left_column, .right_column {
+    margin: 10px;
+}
+
+#write-up {
+    height: 40%;
+}
+
+#review {
+    height: 60%;
+    overflow-y: scroll;
+}
+
+.edit_profile {
+    margin-left: 10%;
+    margin-right: 10%;
+}

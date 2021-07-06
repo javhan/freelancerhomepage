@@ -1,13 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
-
-// const APIKEY = process.env.REACT_APP_FBKEY;
-// const ADOMAIN = process.env.REACT_APP_ADOMAIN;
-// const PROJECTID = process.env.REACT_APP_PROJECTID
-// const SBUCKET = process.env.REACT_APP_SBUCKET
-// const MSI = process.env.REACT_APP_MSI
-// const APPID = process.env.REACT_APP_APPID
-// const MID = process.env.REACT_APP_MID
+import "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC94PYY6IwRz5HDsemouRcZOqjQtmZW5Xc",
@@ -20,4 +13,5 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+
 export default firebase;

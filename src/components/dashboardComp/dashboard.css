@@ -8,8 +8,9 @@ a:visited {
 
 .top_half {
   padding: 30px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 80%;
 }
 
 .bottom_half {
@@ -27,63 +28,82 @@ a:visited {
 
 .past_jobs {
   margin: 30px;
+  width: 25%;
+  height: 100%;
 }
 
 .upcoming_jobs {
   margin: 30px;
+  width: 25%;
+  height: 100%;
+}
+
+.jl {
+  overflow-y: scroll;
+  height: 300px;
 }
 
 .add_job {
   margin: 30px;
   height: 300px;
+  width: 80%;
 }
 
 /* Tooltip container */
 
-  
-  /* Tooltip text */
-  .title .hovertext {
-    visibility: hidden;
-    width: 300px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-   
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1;
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .title:hover .hovertext {
-    visibility: visible;
-  }
+/* Tooltip text */
+.title .hovertext {
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
 
-  .minijb tr {
-      height: 20px;
-  }
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
 
-  .minijb th {
-    border: 1px solid black;
-    padding: 10px;
-  }
+/* Show the tooltip text when you mouse over the tooltip container */
+.title:hover .hovertext {
+  visibility: visible;
+}
 
-  .minijb td {
-    border: 1px solid black;
-    padding: 10px;
-  }
+.minijb {
+  width: 100%;
+}
 
-  #page {
-      background-color: white
-  }
+.minijb tr {
+  height: 20px;
+}
 
-  .pagination { 
-      display: flex;
-      list-style-type: none;
-  }
+.minijb th {
+  border: 1px solid black;
+  padding: 10px;
+}
 
-  .page-link {
-      padding: 5px;
-  }
+.minijb td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#page {
+  background-color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  width: 100%;
+}
+
+.page-item {
+  padding: 5px;
+}
+
+span {
+    font-weight: bold;
+}

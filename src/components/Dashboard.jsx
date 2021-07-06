@@ -4,7 +4,7 @@ import Calendar from "./dashboardComp/Calendar";
 import MiniJB from "./dashboardComp/MiniJB";
 import Pastjobs from "./dashboardComp/Pastjobs";
 import Upcomingjobs from "./dashboardComp/Upcomingjobs";
-import NewEntry from "./dashboardComp/NewEntry"
+import NewEntry from "./dashboardComp/NewEntry";
 
 export default function Dashboard() {
   return (
@@ -23,9 +23,9 @@ export default function Dashboard() {
           <NewEntry />
         </div>
       </div>
-        <div className="calendar">
-          <Calendar />
-        </div>
+      <div className="calendar">
+        <Calendar />
+      </div>
     </div>
   );
 }

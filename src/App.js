@@ -2,41 +2,21 @@ import React, { createContext, useState, useEffect } from "react";
 import "./App.css";
 import image from "./assets/OWNit.png";
 import profileData from "./components/data/profile";
+import reviewData from "./components/data/review";
 import Dashboard from "./components/Dashboard";
 import Profile from "./components/Profile";
 import Login from "./components/Login";
 import Home from "./components/Home";
 import { Route, Link, Switch } from "react-router-dom";
-import firebase from "./components/firebase"
 
 export const ProfileContext = createContext();
 export const ScheduleContext = createContext();
+export const ReviewContext = createContext();
 const ATKey = process.env.REACT_APP_ATKEY;
 
 function App() {
-  const [test, setTest] = useState([]);
-  const ref = firebase.firestore().collection("events")
-  
-  const getTest = () => {
-    ref.onSnapshot((querySnapshot) => {
-      const items = [];
-      querySnapshot.forEach((doc) => {
-        items.push(doc.data());
-      })
-      setTest(items);
-    })
-  }
-
-  useEffect(() => {
-    getTest();
-  }, [])
-
-  console.log(test);  
-  
-  
-  
-  
   const [profile, setProfile] = useState(profileData);
+  const [review, setReview] = useState(reviewData);
   const [event, setEvents] = useState([]);
 
   useEffect(() => {
@@ -57,9 +37,13 @@ function App() {
   const updateEvents = (updatedEntry) => {
     console.log("hi");
   };
+  const updateReview = (updatedEntry) => {
+    console.log("hi");
+  };
 
   const value = { profile, updateProfile };
   const schedule = { event, updateEvents };
+  const reviews = { review, updateReview };
 
   return (
     <div className="App">
@@ -68,7 +52,7 @@ function App() {
         <Link to="/">
           <img src={image} alt="logo" className="logo" />
         </Link>
-        <Login />
+        {/* <Login /> */}
       </div>
       <nav>
         <Link to="/dashboard">
@@ -88,9 +72,11 @@ function App() {
               <Route exact path="/dashboard">
                 <Dashboard />
               </Route>
-              <Route exact path="/profile">
-                <Profile />
-              </Route>
+              <ReviewContext.Provider value={reviews}>
+                <Route exact path="/profile">
+                  <Profile />
+                </Route>
+              </ReviewContext.Provider>
             </ScheduleContext.Provider>
           </Switch>
         </main>

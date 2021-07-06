@@ -17,14 +17,13 @@ export default function EditProfile(props) {
   };
 
   return (
-    <div>
+    <div className="edit_profile">
       <div>
-        <img src={props.image} alt="profile pic" className="profilePic" />
         <form onSubmit={handleSaveChanges}>
         <button onClick={handleSaveChanges}>Save Changes</button>
         <button onClick={props.handleClick}>Cancel</button>
         <br></br>
-          <input
+        <span>First Name: </span><input
             name="firstName"
             type="string"
             placeholder="First Name"
@@ -32,7 +31,7 @@ export default function EditProfile(props) {
             onChange={handleChange}
           />
           <br></br>
-          <input
+          <span>Last Name: </span><input
             name="lastName"
             type="string"
             placeholder="Last Name"
@@ -40,7 +39,7 @@ export default function EditProfile(props) {
             onChange={handleChange}
           />
           <br></br>
-          <input
+          <span>Title: </span><input
             name="jobTitle"
             type="string"
             placeholder="Job Title"
@@ -48,7 +47,7 @@ export default function EditProfile(props) {
             onChange={handleChange}
           />
           <br></br>
-          <input
+          <span>Email: </span><input
             name="emailAddress"
             type="string"
             placeholder="Email Address"
@@ -56,7 +55,7 @@ export default function EditProfile(props) {
             onChange={handleChange}
           />
           <br></br>
-          <input
+          <span>Contact Number: </span><input
             name="contactNumber"
             type="string"
             placeholder="Contact Number"

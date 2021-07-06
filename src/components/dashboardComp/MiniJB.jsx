@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Button from "@material-ui/core/Button";
 
 const adzunaID = process.env.REACT_APP_ID;
 const adzunaKey = process.env.REACT_APP_KEY;
@@ -9,7 +10,7 @@ const jobURL = `https://api.adzuna.com/v1/api/jobs/sg/search/1?app_id=${adzunaID
 export default function MiniJB() {
   const [topFive, setTopFive] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(5);
+  const [postsPerPage] = useState(5);
 
   useEffect(() => {
     const makeApiCall = async () => {
@@ -65,12 +66,12 @@ export default function MiniJB() {
               </td>
 
               <td>
-                <a href={feelingLucky(props.company.display_name)}>
+                <a href={feelingLucky(props.company.display_name)} target="_blank">
                   {props.company.display_name}
                 </a>
               </td>
               <td>
-                <a href={props.redirect_url}>Link</a>
+                <a href={props.redirect_url} target="_blank">Link</a>
               </td>
             </tr>
           ))}
@@ -80,10 +81,16 @@ export default function MiniJB() {
         <ul className = "pagination">
           {pageNumbers.map(number => (
             <li key={number} className="page-item">
-              <button onClick={() =>
-                paginate(number)} className="page-link">
-                {number}
-              </button>
+              <Button
+            size="small"
+            variant="contained"
+            color="primary"
+            style={{maxWidth: '30px', maxHeight: '30px', minWidth: '30px', minHeight: '30px'}}
+            onClick={() =>
+              paginate(number)} className="page-link"
+          >
+            {number}
+          </Button>
             </li>
           ))}
         </ul>
