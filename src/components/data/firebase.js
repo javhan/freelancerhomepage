@@ -3,13 +3,13 @@ import "firebase/firestore";
 import "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC94PYY6IwRz5HDsemouRcZOqjQtmZW5Xc",
-  authDomain: "scheduled-events-1d7b5.firebaseapp.com",
-  projectId: "scheduled-events-1d7b5",
-  storageBucket: "scheduled-events-1d7b5.appspot.com",
-  messagingSenderId: "655473634807",
-  appId: "1:655473634807:web:53f584258df318640392f2",
-  measurementId: "G-YSD64GVKYC",
+  apiKey: process.env.REACT_APP_FBKey,
+  authDomain: process.env.REACT_APP_ADOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_SBUCKET,
+  messagingSenderId: process.env.REACT_APP_MSI,
+  appId: process.env.REACT_APP_APPID,
+  measurementId: process.env.REACT_APP_MID,
 };
 
 firebase.initializeApp(firebaseConfig);

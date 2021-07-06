@@ -11,14 +11,18 @@
 }
 
 .left_column, .right_column {
-    margin: 10px;
+    margin: 20px;
 }
 
 #write-up {
-    height: 40%;
+    height: 30%;
 }
 
 #review {
+    height: 30%;
+}
+
+.review_box {
     height: 60%;
     overflow-y: scroll;
 }

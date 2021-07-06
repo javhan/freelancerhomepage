@@ -42,6 +42,7 @@ export default function Profile() {
           <div id="review">
             <Review reviews={reviewContext}/>
           </div>
+          
         </div>
       </div>
     );
