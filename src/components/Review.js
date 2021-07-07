@@ -6,7 +6,6 @@ export default function Review(props) {
   const [reviews, setReviews] = useState([]);
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
-  // const [stars, setStars] = useState(0);
 
   const ref = firebase.firestore().collection("reviews");
 
@@ -16,6 +15,9 @@ export default function Review(props) {
       querySnapshot.forEach((doc) => {
         items.push(doc.data());
       });
+      if (items.length === 0) {
+        return;
+      }
       const sortedItems = items.sort((a, b) => {
         return (a.date.toDate() - b.date.toDate())
       })
