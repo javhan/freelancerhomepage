@@ -47,6 +47,7 @@ export default function MiniJB() {
 
   return (
     <div>
+      <h1>Jobs For You</h1>
       <table className="minijb">
         <thead>
           <tr>

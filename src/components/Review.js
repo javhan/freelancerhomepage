@@ -16,7 +16,10 @@ export default function Review(props) {
       querySnapshot.forEach((doc) => {
         items.push(doc.data());
       });
-      setReviews(items);
+      const sortedItems = items.sort((a, b) => {
+        return (a.date.toDate() - b.date.toDate())
+      })
+      setReviews(sortedItems);
     });
   };
 

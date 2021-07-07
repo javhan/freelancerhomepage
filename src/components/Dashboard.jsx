@@ -12,6 +12,9 @@ export default function Dashboard() {
       <div className="top_half">
         <MiniJB />
       </div>
+      <div className="calendar">
+        <Calendar />
+      </div>
       <div className="bottom_half">
         <div className="past_jobs">
           <Pastjobs />
@@ -22,9 +25,6 @@ export default function Dashboard() {
         <div className="newEntry">
           <NewEntry />
         </div>
-      </div>
-      <div className="calendar">
-        <Calendar />
       </div>
     </div>
   );
