@@ -44,9 +44,9 @@ a:visited {
 }
 
 .add_job {
-  margin: 30px;
-  height: 300px;
+  margin: 50px;
   width: 80%;
+  height: 100%;
 }
 
 /* Tooltip container */

@@ -9,19 +9,15 @@ import {
   Agenda,
 } from "@syncfusion/ej2-react-schedule";
 
-import { ScheduleContext, TestContext } from "../../App"
+import { ScheduleContext } from "../../App"
 
 export default function Calendar() {
     const scheduleContext = useContext(ScheduleContext);
-    const testContext = useContext(TestContext);
-    console.log("SC", scheduleContext)
-    console.log("TC", testContext)
-    
   return (
     <div className="scheduler">
       <ScheduleComponent
         currentView="Month"
-        eventSettings={{ dataSource: testContext.test }}
+        eventSettings={{ dataSource: scheduleContext.event.map((prop) => prop.fields) }}
       >
         <Inject services={[Day, Week, WorkWeek, Month, Agenda]} />
       </ScheduleComponent>

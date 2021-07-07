@@ -3,12 +3,11 @@ import image from "../assets/profilepic.jpg";
 import "./Profile.css";
 import EditProfile from "./EditProfile";
 import Review from "./Review";
-import { ProfileContext, ReviewContext } from "../App";
+import { ProfileContext } from "../App";
 
 export default function Profile() {
   const [edit, setEdit] = useState(false);
   const profileContext = useContext(ProfileContext);
-  const reviewContext = useContext(ReviewContext);
 
   const handleClick = () => {
     if (edit === true) {
@@ -24,10 +23,10 @@ export default function Profile() {
         <div className="left_column">
           <div id="ppic">
             <img src={image} alt="profile pic" className="profilePic" />
-            <button onClick={handleClick}>Edit</button>
-            <p>First Name: {profileContext.profile.firstName}</p>
           </div>
           <div id="basicdetails">
+            <button onClick={handleClick}>Edit</button>
+            <p>First Name: {profileContext.profile.firstName}</p>
             <p>Last Name: {profileContext.profile.lastName}</p>
             <p>Title: {profileContext.profile.jobTitle}</p>
             <p>Email: {profileContext.profile.emailAddress} </p>
@@ -40,7 +39,7 @@ export default function Profile() {
           </div>
           <h2>Reviews</h2>
           <div id="review">
-            <Review reviews={reviewContext}/>
+            <Review />
           </div>
           
         </div>

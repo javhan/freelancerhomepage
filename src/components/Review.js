@@ -1,10 +1,9 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import firebase from "./data/firebase";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Review(props) {
   const [reviews, setReviews] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
   // const [stars, setStars] = useState(0);
@@ -12,14 +11,12 @@ export default function Review(props) {
   const ref = firebase.firestore().collection("reviews");
 
   const getReviews = () => {
-    setLoading(true);
     ref.onSnapshot((querySnapshot) => {
       const items = [];
       querySnapshot.forEach((doc) => {
         items.push(doc.data());
       });
       setReviews(items);
-      setLoading(false);
     });
   };
 
@@ -44,9 +41,6 @@ export default function Review(props) {
         console.log(err);
       });
   };
-
-
-  console.log(reviews);
 
   return (
     <>
@@ -75,7 +69,9 @@ export default function Review(props) {
         <br></br>
         <textarea onChange={(e) => setComment(e.target.value)} />
         <button
-          onClick={() => addReviews({ name, comment, id: uuidv4() })}
+          onClick={() => {
+            let newDate = new Date()
+            addReviews({ name, comment, id: uuidv4(), date: newDate })}}
         >
           Submit
         </button>

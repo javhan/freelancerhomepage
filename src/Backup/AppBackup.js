@@ -6,42 +6,40 @@ import Dashboard from "./components/Dashboard";
 import Profile from "./components/Profile";
 import Home from "./components/Home";
 import { Route, Link, Switch } from "react-router-dom";
-import firebase from "./components/data/firebase";
 
 export const ProfileContext = createContext();
 export const ScheduleContext = createContext();
-export const TestContext = createContext();
+const ATKey = process.env.REACT_APP_ATKEY;
 
 function App() {
   const [profile, setProfile] = useState(profileData);
-  const [test, setTest] = useState([]);
-
-  const ref = firebase.firestore().collection("events");
-
-
-  const getEvents = () => {
-    ref.onSnapshot((querySnapshot) => {
-      const items = [];
-      querySnapshot.forEach((doc) => {
-        items.push(doc.data());
-      });
-      setTest(items);
-    });
-  };
+  const [event, setEvents] = useState([]);
 
   useEffect(() => {
-    getEvents();
+    fetch(
+      `https://api.airtable.com/v0/appzWGZzAJmMUTHkg/Table%201?api_key=${ATKey}`
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res.records);
+        setEvents(res.records);
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   const updateProfile = (updatedEntry) => {
     setProfile({ ...updatedEntry });
   };
-  const updateTest = (updatedEntry) => {
+  const updateEvents = (updatedEntry) => {
+    console.log("hi");
+  };
+  const updateReview = (updatedEntry) => {
     console.log("hi");
   };
 
   const value = { profile, updateProfile };
-  const testing = { test, updateTest };
+  const schedule = { event, updateEvents };
+  const reviews = { review, updateReview };
 
   return (
     <div className="App">
@@ -64,15 +62,16 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-              <TestContext.Provider value={testing}>
-                <Route exact path="/dashboard">
-                  <Dashboard />
-                </Route>
-
+            <ScheduleContext.Provider value={schedule}>
+              <Route exact path="/dashboard">
+                <Dashboard />
+              </Route>
+              <ReviewContext.Provider value={reviews}>
                 <Route exact path="/profile">
                   <Profile />
                 </Route>
-              </TestContext.Provider>
+              </ReviewContext.Provider>
+            </ScheduleContext.Provider>
           </Switch>
         </main>
       </ProfileContext.Provider>
