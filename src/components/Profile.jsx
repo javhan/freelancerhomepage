@@ -38,15 +38,7 @@ export default function Profile() {
         </div>
         <div className="right_column">
           <h1>About You</h1>
-          <div id="write-up">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </div>
+          <div id="write-up">{profileContext.profile.writeUp}</div>
           <h2>Reviews</h2>
           <div id="review">
             <Review />

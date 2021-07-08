@@ -60,6 +60,7 @@ export default function Review() {
           );
         })}
       </div>
+      <hr></hr>
       <div className="add_comment">
         <h3>Add New</h3>
         <label>Name:</label>

@@ -9,7 +9,6 @@ import { Route, Link, Switch } from "react-router-dom";
 import firebase from "./components/data/firebase";
 
 export const ProfileContext = createContext();
-export const ScheduleContext = createContext();
 export const TestContext = createContext();
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
   const [test, setTest] = useState([]);
 
   const ref = firebase.firestore().collection("events");
-
 
   const getEvents = () => {
     ref.onSnapshot((querySnapshot) => {
@@ -48,6 +46,9 @@ function App() {
         </Link>
       </div>
       <nav>
+        <Link to="/">
+          <h1>Home</h1>
+        </Link>
         <Link to="/dashboard">
           <h1>Dashboard</h1>
         </Link>
@@ -61,15 +62,15 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-              <TestContext.Provider value={testing}>
-                <Route exact path="/dashboard">
-                  <Dashboard />
-                </Route>
+            <TestContext.Provider value={testing}>
+              <Route exact path="/dashboard">
+                <Dashboard />
+              </Route>
 
-                <Route exact path="/profile">
-                  <Profile />
-                </Route>
-              </TestContext.Provider>
+              <Route exact path="/profile">
+                <Profile />
+              </Route>
+            </TestContext.Provider>
           </Switch>
         </main>
       </ProfileContext.Provider>

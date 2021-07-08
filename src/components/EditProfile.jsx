@@ -18,64 +18,72 @@ export default function EditProfile(props) {
 
   return (
     <>
-    <h1 id="edit_header">Edit Profile</h1> 
-    <div className="edit_profile">
-      <form onSubmit={handleSaveChanges}>
-        <br></br>
-        <label>First Name: </label>
-        <br></br>
-        <input
-          name="firstName"
-          type="string"
-          placeholder="First Name"
-          value={formData.firstName}
-          onChange={handleChange}
-        />
-        <br></br>
-        <label>Last Name: </label>
-        <br></br>
-        <input
-          name="lastName"
-          type="string"
-          placeholder="Last Name"
-          value={formData.lastName}
-          onChange={handleChange}
-        />
-        <br></br>
-        <label>Title: </label>
-        <br></br>
-        <input
-          name="jobTitle"
-          type="string"
-          placeholder="Job Title"
-          value={formData.jobTitle}
-          onChange={handleChange}
-        />
-        <br></br>
-        <label>Email: </label>
-        <br></br>
-        <input
-          name="emailAddress"
-          type="string"
-          placeholder="Email Address"
-          value={formData.emailAddress}
-          onChange={handleChange}
-        />
-        <br></br>
-        <label>Contact Number: </label>
-        <br></br>
-        <input
-          name="contactNumber"
-          type="string"
-          placeholder="Contact Number"
-          value={formData.contactNumber}
-          onChange={handleChange}
-        />
-        <br></br>
-        <button onClick={handleSaveChanges}>Save Changes</button>
-        <button onClick={props.handleClick}>Cancel</button>
-      </form>
-    </div>
+      <h1 id="edit_header">Edit Profile</h1>
+      <div className="edit_profile">
+        <form onSubmit={handleSaveChanges}>
+          <br></br>
+          <label>First Name: </label>
+          <br></br>
+          <input
+            name="firstName"
+            type="string"
+            placeholder="First Name"
+            value={formData.firstName}
+            onChange={handleChange}
+          />
+          <br></br>
+          <label>Last Name: </label>
+          <br></br>
+          <input
+            name="lastName"
+            type="string"
+            placeholder="Last Name"
+            value={formData.lastName}
+            onChange={handleChange}
+          />
+          <br></br>
+          <label>Title: </label>
+          <br></br>
+          <input
+            name="jobTitle"
+            type="string"
+            placeholder="Job Title"
+            value={formData.jobTitle}
+            onChange={handleChange}
+          />
+          <br></br>
+          <label>Email: </label>
+          <br></br>
+          <input
+            name="emailAddress"
+            type="string"
+            placeholder="Email Address"
+            value={formData.emailAddress}
+            onChange={handleChange}
+          />
+          <br></br>
+          <label>Contact Number: </label>
+          <br></br>
+          <input
+            name="contactNumber"
+            type="string"
+            placeholder="Contact Number"
+            value={formData.contactNumber}
+            onChange={handleChange}
+          />
+          <br></br>
+          <label>Write Up:</label>
+          <br></br>
+          <textarea
+            cols="50"
+            onChange={handleChange}
+            name="writeUp"
+            value={formData.writeUp}
+          />
+          <button onClick={handleSaveChanges}>Save Changes</button>
+          <button onClick={props.handleClick}>Cancel</button>
+        </form>
+      </div>
     </>
   );
 }

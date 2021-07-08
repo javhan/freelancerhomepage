@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Freelancer Homepage
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project serves as both a mockup component for what a freelancer will experience when they use the service in the future and as a practice as I continue to hone my skills as a developer
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+### Technical Used 
 
-### `npm start`
+- React
+- HTML
+- CSS
+- Javascript
+- syncfusion
+- material-ui
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Wireframes
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![plot](./src/assets/wireframe1.png)
+![plot](./src/assets/wireframe2.png)
+![plot](./src/assets/wireframe3.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### User Stories
 
-### `npm run build`
+- Navigation bar at the top which has several categories (clickables will be Home, Dashboard, Profile)
+- Home Page
+    -   This is where you'll be greeted with an inspirational quote to start your day
+- Dashboard
+    -   Top third will display your past and upcoming jobs where you can delete by clicking on them. It also includes a form to allow you to add more jobs
+    -   The middle third is a calendar which will allow you to visualise your appointments
+    -   The bottom third will be a job board which allows you to see a description as you hover, visit their website, and go to apply on the link
+- Profile
+    -   A friendster-esque format which has your details on the left, followed by a write up of the freelancer on the right and a review box at the bottom
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Planning and Development Process
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+As I am looking to start a startup with a friend of mine, I thought why not just create a segment of what I would like the user to experience. 
 
-### `npm run eject`
+Given my knowledge thus far, I am dedicating this project to creating a mockup of a freelancer’s homepage when he/she accesses the platform. It’ll (hopefully) be an ideal one-stop platform to see a summary of their jobs (past and upcoming), search for jobs, schedule and manage their profiles.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+During the development, I usually focused on the functionality of each component first before moving on to the CSS. However, as the project went on, I came to understand also the importance of UX/UI such that I would want to continue honing my design skills as well to produce something in the future that is both aesthetically and functionally pleasing. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Problem-Solving Strategy
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Every time I face an obstacle, I would usually refer to youtube or forums to clear doubts, if not I would consult peers. If I couldn't solve the issue, I would pivot and find an alternative way of producing a similar result.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Unsolved problems
 
-## Learn More
+- Unique users when visiting the site
+    - Review box can be edited and commented by anyone under any alias
+    - Changes in appointments can be made by anyone
+- Job data not as ideal, would require my own data as I collect them in the future
+- Schedular component still not fully utilised (changes made there won't make changes to upcoming/past jobs)
+- Many more features that I would like to add as I learn more along the way
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## APIs Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Adzuna - Wanted to find an API for freelance jobs in Singapore but this was the closest I could find. This api provided basic details needed for the job board.
 
-### Code Splitting
+Quotable - As we're big on empowerment (thus calling ourselves OWN it), a random inspirational quote could be what's needed to urge someone to hustle
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- General Assembly for the guidance and lessons 
+- Dev World for the firebase tutorial which allowed me to manage data live
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ ## References

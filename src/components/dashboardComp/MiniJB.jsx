@@ -51,10 +51,10 @@ export default function MiniJB() {
       <table className="minijb">
         <thead>
           <tr>
-            <th>Job ID</th>
-            <th>Job Title</th>
-            <th>Company</th>
-            <th>Job Link</th>
+            <th>JOB ID</th>
+            <th>JOB TITLE</th>
+            <th>COMPANY</th>
+            <th>JOB LINK</th>
           </tr>
         </thead>
         <tbody>
