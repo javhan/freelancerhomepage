@@ -17,6 +17,8 @@ export default function EditProfile(props) {
   };
 
   return (
+    <>
+    <h1 id="edit_header">Edit Profile</h1> 
     <div className="edit_profile">
       <form onSubmit={handleSaveChanges}>
         <br></br>
@@ -74,5 +76,6 @@ export default function EditProfile(props) {
         <button onClick={props.handleClick}>Cancel</button>
       </form>
     </div>
+    </>
   );
 }

@@ -1,3 +1,12 @@
+h1 {
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+}
+
 nav {
   height: 40px;
   background: black;
@@ -12,6 +21,7 @@ nav h1 {
   margin-right: 15px;
   display: inline-block;
   vertical-align: middle;
+  font-size: 20px
 }
 
 .logo {
@@ -48,9 +58,26 @@ a:link {
 }
 
 a:visited {
-  color:white;
+  color: white;
 }
 
 a:hover {
-  color: cyan
+  color: cyan;
+}
+
+input,
+textarea {
+  border-color: rgba(27, 20, 32, 0.178);
+  border-radius: 5px;
+  resize: none;
+}
+
+#footer {
+  background-color: black;
+  color: white;
+  height: 60px;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+  text-align: center;
 }

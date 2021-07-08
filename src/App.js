@@ -36,12 +36,9 @@ function App() {
   const updateProfile = (updatedEntry) => {
     setProfile({ ...updatedEntry });
   };
-  const updateTest = (updatedEntry) => {
-    console.log("hi");
-  };
 
   const value = { profile, updateProfile };
-  const testing = { test, updateTest };
+  const testing = { test, setTest };
 
   return (
     <div className="App">
@@ -76,6 +73,7 @@ function App() {
           </Switch>
         </main>
       </ProfileContext.Provider>
+      <div id="footer">SEI-30 Project 2</div>
     </div>
   );
 }

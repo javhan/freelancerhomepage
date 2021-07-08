@@ -10,41 +10,74 @@
     justify-content: space-evenly;
 }
 
-.left_column, .right_column {
+.right_column {
     margin: 20px;
     height: 1200px;
 }
-
-#ppic {
-    border-style:solid
+.left_column{
+    margin: 20px;
+    padding: 1px;
+    max-height: 500px;
+    
 }
+#details {
+    border-style:ridge;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
 
 #write-up {
     height: 30%;
-    border-style:solid;
+    border-style:ridge;
+    border-radius: 10px;
     padding: 10px;
 }
 
 #review {
     height: 45%;
-    border-style:solid
+    border-style:ridge;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .review_box {
     height: 60%;
     overflow-y: scroll;
     padding: 10px;
-    border-style:solid
+
 }
 
 .edit_profile {
     display: flex;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 20%;
-    
+    margin-top: 20px;
+    border-style: ridge;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#edit_header {
+    margin-left: 10%;
 }
 
 .add_comment {
     padding: 10px;
+}
+
+.indiv_review {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(243, 229, 229);
+    border-radius: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+}
+
+#customer_name {
+    width: 100%;
+    font-weight: bold;
 }
