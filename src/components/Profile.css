@@ -82,3 +82,7 @@
     width: 100%;
     font-weight: bold;
 }
+
+#write-up span {
+    font-style: italic;
+}

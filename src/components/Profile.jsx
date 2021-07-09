@@ -31,14 +31,18 @@ export default function Profile() {
               <p>First Name: {profileContext.profile.firstName}</p>
               <p>Last Name: {profileContext.profile.lastName}</p>
               <p>Title: {profileContext.profile.jobTitle}</p>
-              <p>Email: {profileContext.profile.emailAddress} </p>
+              <p>Email: <a href={`mailto: ${profileContext.profile.emailAddress}`}>{profileContext.profile.emailAddress}</a> </p>
               <p>Contact Number: {profileContext.profile.contactNumber}</p>
             </div>
           </div>
         </div>
         <div className="right_column">
           <h1>About You</h1>
-          <div id="write-up">{profileContext.profile.writeUp}</div>
+          <div id="write-up">
+            <h1>Hey there, I'm {profileContext.profile.firstName}!</h1>
+            <span>{profileContext.profile.jobTitle}</span>
+            <p>{profileContext.profile.writeUp}</p>
+          </div>
           <h2>Reviews</h2>
           <div id="review">
             <Review />

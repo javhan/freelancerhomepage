@@ -14,10 +14,14 @@ This project serves as both a mockup component for what a freelancer will experi
 - material-ui
 
 ### Wireframes
-
-![plot](./src/assets/wireframe1.png)
-![plot](./src/assets/wireframe2.png)
+Dashboard:
 ![plot](./src/assets/wireframe3.png)
+
+Profile:
+![plot](./src/assets/wireframe1.png)
+
+Search:
+![plot](./src/assets/wireframe2.png)
 
 
 ### User Stories
@@ -70,3 +74,4 @@ Quotable - As we're big on empowerment (thus calling ourselves OWN it), a random
 ---
 
  ## References
+Credit for profile page inspiration goes to https://www.optimizemybnb.com/wp-content/uploads/2018/12/airbnb-description-text-guest-profile.png

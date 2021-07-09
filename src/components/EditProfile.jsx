@@ -76,6 +76,7 @@ export default function EditProfile(props) {
           <br></br>
           <textarea
             cols="50"
+            rows="20"
             onChange={handleChange}
             name="writeUp"
             value={formData.writeUp}
