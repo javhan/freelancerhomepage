@@ -17,10 +17,10 @@ This project serves as both a mockup component for what a freelancer will experi
 Dashboard:
 ![plot](./src/assets/wireframe3.png)
 
-Profile:
+Search:
 ![plot](./src/assets/wireframe1.png)
 
-Search:
+Profile:
 ![plot](./src/assets/wireframe2.png)
 
 
